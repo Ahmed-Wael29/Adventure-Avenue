@@ -6,6 +6,8 @@ using TMPro;
 public class itemCollector : MonoBehaviour
 {
     int coins = 0;
+    [SerializeField] AudioSource collectionSound;
+
     [SerializeField] TextMeshProUGUI coinsText;
     private void OnTriggerEnter(Collider other)
     {
@@ -14,8 +16,9 @@ public class itemCollector : MonoBehaviour
             Destroy(other.gameObject);
             coins++;
             coinsText.text = "Coins: " + coins;
+            collectionSound.Play();
 
-           
+
         }
     }
        
