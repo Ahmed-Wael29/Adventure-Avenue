@@ -8,6 +8,8 @@ TagManager:
   - Enemy Body
   - Enemy Head
   - coin
+  - FirstQ
+  - Panel
   layers:
   - Default
   - TransparentFX

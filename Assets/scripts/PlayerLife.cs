@@ -15,6 +15,13 @@ public class PlayerLife : MonoBehaviour
             Die();
         }
     }
+
+   
+       
+
+    
+
+
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Enemy Body"))
         {
@@ -23,6 +30,16 @@ public class PlayerLife : MonoBehaviour
             GetComponent<PalyerMovement>().enabled = false;
             Die();
         }
+
+
+    //     if (collision.gameObject.CompareTag("FirstQ"))
+      //  {
+        //   
+          //  GameObject objectToHide = GameObject.Find("Panel");
+            //objectToHide.SetActive(true);
+       // }
+
+
     }
 
     void Die() {
@@ -31,6 +48,10 @@ public class PlayerLife : MonoBehaviour
         Invoke(nameof(ReloadLevel), 1.3f);
         dead = true;
         deathSound.Play();
+
+      
+
+
     }
 
     void ReloadLevel() {
